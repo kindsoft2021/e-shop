@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --color-ink: #0b1830;
+  --color-brand: #315efb;
+  --color-brand-dark: #2448d8;
+  --color-mist: #f4f7fb;
+  --color-muted: #718096;
+}
+
+@layer utilities {
+  :root { font-family: var(--font-sans); color: #17243a; background: #f7f9fc; font-synthesis: none; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; min-width: 320px; }
+  button, input, select, textarea { font: inherit; }
+  button { cursor: pointer; }
+  button:disabled { cursor: not-allowed; opacity: .55; }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: #dbeafe; }
+  .container-shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+  .panel-shadow { box-shadow: 0 12px 35px rgba(22, 42, 79, .055); }
+  .soft-grid { background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 36px 36px; }
+}
