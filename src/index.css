@@ -7,7 +7,7 @@
   --color-brand-dark: #2448d8;
   --color-mist: #f4f7fb;
   --color-muted: #718096;
-  --theme-color-logo: #009999;
+  --color-blue-600: #009999;
 }
 
 @layer utilities {
