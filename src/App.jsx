@@ -193,23 +193,19 @@ function useShop() {
 function Logo({ light = false }) {
   return (
     <Link to="/" className="flex items-center gap-3 shrink-0">
-      <span
-        className={`grid size-10 place-items-center rounded-xl ${light ? "bg-white/10 text-white ring-1 ring-white/15" : "bg-blue-600 text-white"} shadow-sm`}
-      >
-        <Layers3 size={22} strokeWidth={2.2} />
-      </span>
-      <span className="leading-tight">
-        <span
-          className={`block text-[17px] font-bold tracking-wide ${light ? "text-white" : "text-slate-900"}`}
+      <div className={`${light ? 'text-white' : 'text-[#009999]'}`}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 130 22"
+          height="24"
+          aria-label="Siemens AG"
         >
-          云序科技
-        </span>
-        <span
-          className={`block text-[10px] tracking-[.22em] ${light ? "text-blue-100/65" : "text-slate-400"}`}
-        >
-          YUNXU DIGITAL SERVICES
-        </span>
-      </span>
+          <path
+            fill="currentColor"
+            d="M7.97 0q1.951 0 5.644.752v3.92q-2.746-1.147-5.102-1.147-3.318-.001-3.318 1.91 0 .713.67 1.165.555.365 3.064 1.545 3.609 1.677 4.806 2.917 1.42 1.472 1.421 3.806 0 3.354-2.786 5.116-2.258 1.429-5.853 1.428-3.036 0-6.116-.751v-4.075q3.325 1.095 5.884 1.095 3.534 0 3.534-1.954a1.63 1.63 0 0 0-.515-1.224q-.527-.525-2.698-1.459-3.894-1.675-5.075-2.856Q0 8.628 0 6.253q0-3.061 2.229-4.664Q4.432-.001 7.97 0m114.337 0q1.991 0 5.155.663l.487.089v3.92q-2.748-1.147-5.116-1.147-3.303-.001-3.302 1.91 0 .713.666 1.165.53.351 3.08 1.545 3.583 1.677 4.791 2.917 1.423 1.472 1.422 3.806 0 3.354-2.772 5.116-2.272 1.429-5.866 1.428a25.7 25.7 0 0 1-6.118-.751v-4.075q3.297 1.095 5.886 1.095 3.534 0 3.533-1.954 0-.729-.5-1.224-.529-.525-2.712-1.459-3.882-1.66-5.076-2.856-1.529-1.545-1.528-3.95c0-2.03.74-3.58 2.228-4.65Q118.766 0 122.307 0M53.92.359l4.962 13.185L63.968.36h6.784v20.636h-5.223V6.384l-5.783 14.82H56.33L50.66 6.384v14.61h-3.881V.36zm-30.145 0v20.636h-5.509V.359zm19.18 0V4.09h-8.82v4.66h7.677v3.404h-7.676v4.898h9.046v3.942H28.827V.359zm46.978 0V4.09h-8.819v4.66h7.677v3.404h-7.677v4.898h9.047v3.942H75.805V.359zm10.237 0 6.774 13.814V.359h3.88v20.636h-6.203l-6.954-14v14h-3.881V.359z"
+          />
+        </svg>
+      </div>
     </Link>
   );
 }
@@ -351,10 +347,221 @@ function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="container-shell flex flex-col justify-between gap-2 py-5 text-xs text-slate-500 sm:flex-row">
-          <span>© 2026 云序科技 · 企业数字服务商城</span>
-          <span>本项目为前端演示版本，支付与订单数据均为本地模拟</span>
+          <div className="flex flex-row flex-wrap leading-[20px]">
+            {/* 西门子数字化工业软件 */}
+            <div className="mr-[40px] mb-[15px]">
+              <a
+                href="https://www.sw.siemens.com/en-US/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mr-[20px] text-[#9999a9] transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+              >
+                <span>西门子数字化工业软件</span>
+              </a>
+            </div>
+
+            {/* 法律与备案链接 */}
+            <nav>
+              <ul className="flex list-none flex-row flex-wrap">
+                <li>
+                  <a
+                    href="https://www.siemens.com/cn/zh/general/privacy-notice.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[20px] mb-[15px] block text-[#9999a9] no-underline transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+                    data-ste-link-id="0000096801.app:3911173067.neral/privacy-notice.html:0000000045"
+                  >
+                    隐私政策
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://new.siemens.com/cn/zh/general/cookie-notice.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[20px] mb-[15px] block text-[#9999a9] no-underline transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+                    data-ste-link-id="0000096801.app:4112875433.eneral/cookie-notice.html:0952189513"
+                  >
+                    Cookie政策
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://new.siemens.com/cn/zh/general/terms-of-use.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[20px] mb-[15px] block text-[#9999a9] no-underline transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+                    data-ste-link-id="0000096801.app:1648802033.general/terms-of-use.html:0000000045"
+                  >
+                    使用条款
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="http://beian.miit.gov.cn/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[20px] mb-[15px] block text-[#9999a9] no-underline transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+                    data-ste-link-id="0000096801.app:2118828298.http://beian.miit.gov.cn/:2504572964"
+                  >
+                    沪ICP备14037484号-17
+                  </a>
+                </li>
+
+                {/* <li>
+                  <a
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502040638"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mr-[20px] mb-[15px] block text-[#9999a9] no-underline transition-colors hover:text-[#00ffb9] focus:text-[#00ffb9] active:text-[#00ffb9]"
+                    data-ste-link-id="0000096801.app:0719911706.recordcode=11010502040638:0573777897"
+                  >
+                    京公网安备 11010502040638号
+                  </a>
+                </li> */}
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
+    </footer>
+  );
+}
+
+function SieFooter() {
+  return (
+    <footer class="pb-0" style="background-color: #000028;">
+      <section class="fullwidth-section">
+        <div class="section-container">
+          <div class="relative h-[100px]">
+            <div class="absolute left-0 top-0 flex h-[100px] w-[400px]">
+              <figure class="h-[100px] w-[100px]">
+                <img
+                  class="h-[100px] w-[100px]"
+                  src="https://sie-vep-static.oss-cn-shanghai.aliyuncs.com/rl2026/pc/register/finish-qr.png"
+                  alt=""
+                />
+              </figure>
+
+              <div class="h-[72px] grow pl-[20px] pt-[15px] pb-[13px] text-[14px] font-normal leading-[24px] text-white">
+                <p class="text-[16px] leading-[24px]">关注西门子工业软件</p>
+                <p class="text-[16px] leading-[24px]">官方微信公众号</p>
+                <p class="text-[16px] leading-[24px]">
+                  助转型者有力，让有力者前行
+                </p>
+              </div>
+            </div>
+
+            <div class="absolute left-[440px] flex h-[20px] gap-[120px] pt-[40px] text-[16px] font-normal leading-[20px] text-white">
+              <div class="group">
+                <div class="h-[16px] w-[220px] text-left text-[16px] font-normal leading-[16px]">
+                  西门子产品咨询电话：
+                </div>
+
+                <a
+                  class="relative mt-[10px] block h-[16px] text-[16px] leading-[16px] text-[#00CCCC] underline group-hover:text-[#03FFB9]"
+                  href="tel:400-120-0052"
+                >
+                  <span
+                    class="before:mr-0 before:inline-block before:translate-y-[3px] before:text-[20px] before:font-normal before:not-italic before:content-['\e92a']"
+                    style="font-family: 'Siemens Web Icons';"
+                  ></span>
+                  400-120-0052
+                </a>
+              </div>
+
+              <div class="group">
+                <div class="h-[16px] w-[220px] text-left text-[16px] font-normal leading-[16px]">
+                  票务咨询邮箱：
+                </div>
+
+                <a
+                  class="relative mt-[10px] block h-[16px] text-[16px] leading-[16px] text-[#00CCCC] underline group-hover:text-[#03FFB9] before:mr-[4px] before:mb-[-3px] before:inline-block before:h-[14px] before:w-[16px] before:bg-[#00CCCC] before:content-[''] before:[mask-image:url('https://sie-vep-static.oss-cn-shanghai.aliyuncs.com/av2024/footer_email.svg')] before:[mask-size:100%] before:[mask-repeat:no-repeat] before:[mask-position:center] before:group-hover:bg-[#03FFB9]"
+                  href="mailto:RealizeLIVE@think4event.com"
+                >
+                  RealizeLIVE@think4event.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="my-[29px] h-px w-full border-t border-[#333353]"></div>
+
+          <div class="leading-[20px]">
+            <div class="footer-legal">
+              <a
+                href="https://www.sw.siemens.com/en-US/"
+                target="_blank"
+                class="footer-tinylink"
+              >
+                <span>西门子数字化工业软件</span>
+              </a>
+            </div>
+
+            <nav class="footer-legalnav">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.siemens.com/cn/zh/general/privacy-notice.html"
+                    target="_blank"
+                    class="footer-tinylink mb-[30px]"
+                    data-ste-link-id="0000096801.app:3911173067.neral/privacy-notice.html:0000000045"
+                  >
+                    <span>隐私政策</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://new.siemens.com/cn/zh/general/cookie-notice.html"
+                    target="_blank"
+                    class="footer-tinylink mb-[30px]"
+                    data-ste-link-id="0000096801.app:4112875433.eneral/cookie-notice.html:0952189513"
+                  >
+                    <span>Cookie政策</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://new.siemens.com/cn/zh/general/terms-of-use.html"
+                    target="_blank"
+                    class="footer-tinylink mb-[30px]"
+                    data-ste-link-id="0000096801.app:1648802033.general/terms-of-use.html:0000000045"
+                  >
+                    <span>使用条款</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="http://beian.miit.gov.cn/"
+                    target="_blank"
+                    class="footer-tinylink mb-[30px]"
+                    data-ste-link-id="0000096801.app:2118828298.http://beian.miit.gov.cn/:2504572964"
+                  >
+                    <span>京ICP备06054295号</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502040638"
+                    target="_blank"
+                    class="footer-tinylink mb-[30px]"
+                    data-ste-link-id="0000096801.app:0719911706.recordcode=11010502040638:0573777897"
+                  >
+                    <span>京公网安备 11010502040638号</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </section>
     </footer>
   );
 }
@@ -1513,12 +1720,7 @@ function CheckoutPage({ shop }) {
               </div>
               <div className="mt-6 grid gap-5 sm:grid-cols-2">
                 {[
-                  [
-                    "company",
-                    "企业 / 组织名称",
-                    "例如：云序科技有限公司",
-                    true,
-                  ],
+                  ["company", "企业 / 组织名称", "例如：XX科技有限公司", true],
                   ["name", "联系人", "请输入联系人姓名", true],
                   ["phone", "联系电话", "11 位手机号码", true],
                   ["email", "电子邮箱", "name@company.com", true],
