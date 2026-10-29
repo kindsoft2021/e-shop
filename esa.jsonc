@@ -1,5 +1,5 @@
 {
-  "name": "vite-shop-site",
+  "name": "e-shop",
   "installCommand": "npm install",
   "buildCommand": "npm run build",
   "assets": {
