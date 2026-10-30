@@ -8,6 +8,7 @@
   --color-mist: #f4f7fb;
   --color-muted: #718096;
   --color-blue-600: #009999;
+  --color-blue-700: #00cccc;
 }
 
 @layer utilities {
